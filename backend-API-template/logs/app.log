@@ -1,0 +1,454 @@
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 6, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 7, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'root'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 104, in view
+    self = view.view_class(  # type: ignore[attr-defined]
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 25, in __init__
+    self.service = UserService()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 28, in __init__
+    self.dao = UserDAO()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 7, in __init__
+    self.db = DB()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 32, in __init__
+    DB._connection_pool = MySQLConnectionPool(host=DB.mysql_host,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 408, in __init__
+    self.add_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 514, in add_connection
+    cnx = connect(**self._cnx_config)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 555, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"
+        INSERT INTO user
+        (id, first_name, last_name, email, username, ' at line 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 65, in cursor
+    yield cursor
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 60, in signup
+    cursor.execute(query, {
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\cursor_cext.py", line 276, in execute
+    result = self._cnx.cmd_query(
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\connection_cext.py", line 563, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"
+        INSERT INTO user
+        (id, first_name, last_name, email, username, ' at line 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\cursor_cext.py", line 649, in statement
+    return self._executed.strip().decode("utf8")
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 188, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 37, in post
+    self.service.signup(first_name=first_name,
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\service\service.py", line 47, in signup
+    self.dao.signup(first_name, last_name, email, username, password)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\dao\dao.py", line 60, in signup
+    cursor.execute(query, {
+  File "C:\Users\Lenovo\.pyenv\pyenv-win\versions\3.8.0\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\common_lib\infra\mysql.py", line 68, in cursor
+    if cursor.statement:
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\mysql\connector\cursor_cext.py", line 651, in statement
+    return self._executed.strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 188, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 29, in post
+KeyError: 'first_name'
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 188, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 29, in post
+KeyError: 'first_name'
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 188, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 29, in post
+KeyError: 'first_name'
+Exception on /api/user/signup [POST]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\.venv\lib\site-packages\flask\views.py", line 188, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)
+  File "C:\Users\Lenovo\OneDrive\Documents\backend-API-template\webapp\users\controller\controller.py", line 29, in post
+KeyError: 'first_name'
