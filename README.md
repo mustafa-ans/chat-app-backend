@@ -1,7 +1,4 @@
-Mustafa
-create content of readme document for a twitter clone backend API project created in Flask library of python and MySQL
-2 / 2
-Twitter Clone Backend API Project
+# Twitter Clone Backend API Project
 
 This project is a Twitter clone backend API created using the Flask library of Python and MySQL database. The API provides endpoints for various Twitter functionalities such as user authentication, posting tweets, following and unfollowing other users, and getting a user's timeline.
 Requirements
